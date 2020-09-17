@@ -7,8 +7,8 @@ import Signedout from './SignedOut';
 
 const NavbarComp = () => (
   <Navbar bg="dark" variant="dark">
-    <Navbar.Brand>
-      <Link to="/">Home</Link>
+    <Navbar.Brand as={Link} to="/">
+      Home
     </Navbar.Brand>
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">

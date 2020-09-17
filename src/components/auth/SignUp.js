@@ -33,7 +33,7 @@ const SignUp = () => {
         />
       </Form.Group>
       <Button variant="primary" type="submit">
-        Signin
+        SignUp
       </Button>
     </Form>
   );

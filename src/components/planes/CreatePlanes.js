@@ -10,7 +10,7 @@ const CreatePlanes = () => {
   return (
     <Form onSubmit={createSubmit}>
       <Form.Group controlId="formBasicEmail">
-        <Form.Label>Username</Form.Label>
+        <Form.Label>Title</Form.Label>
         <Form.Control
           type="text"
           placeholder="Enter Username"
@@ -21,7 +21,7 @@ const CreatePlanes = () => {
       </Form.Group>
 
       <Form.Group controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
+        <Form.Label>Sumarry</Form.Label>
         <Form.Control
           type="password"
           placeholder="Password"
