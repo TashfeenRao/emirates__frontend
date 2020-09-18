@@ -1,3 +1,6 @@
+/* eslint-disable default-case */
+import { CREATE_PROJECT } from '../constants/constants';
+
 const initialState = {
   planes: [
     { id: '1', title: 'plane 1', description: 'hello jee blah blah' },
@@ -6,5 +9,11 @@ const initialState = {
   ],
 };
 
-const rootReducer = (state = initialState, action) => state;
+const rootReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case CREATE_PROJECT:
+      // console.log(action.plane);
+  }
+  return state;
+};
 export default rootReducer;

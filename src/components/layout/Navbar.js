@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Signedin from './SignedIn';
 import Signedout from './SignedOut';
+import CreatePlanes from '../planes/CreatePlanes';
 
 const NavbarComp = () => (
   <Navbar bg="dark" variant="dark">
@@ -16,6 +17,7 @@ const NavbarComp = () => (
         <Nav>
           <Signedin />
           <Signedout />
+          <Nav.Link as={Link} to="/createplane">Create Plane</Nav.Link>
         </Nav>
       </Navbar.Text>
     </Navbar.Collapse>
