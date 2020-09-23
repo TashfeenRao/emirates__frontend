@@ -6,6 +6,8 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
   const signUpSubmit = e => {
     e.preventDefault();
+    console.log(username);
+    console.log(password);
     setUsername('');
     setPassword('');
   };

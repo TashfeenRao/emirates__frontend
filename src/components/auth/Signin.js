@@ -6,6 +6,8 @@ const Signin = () => {
   const [password, setPassword] = useState('');
   const signinSubmit = e => {
     e.preventDefault();
+    console.log(username);
+    console.log(password);
   };
   return (
     <Form onSubmit={signinSubmit}>

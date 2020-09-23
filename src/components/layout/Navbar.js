@@ -4,7 +4,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Signedin from './SignedIn';
 import Signedout from './SignedOut';
-import CreatePlanes from '../planes/CreatePlanes';
 
 const NavbarComp = () => (
   <Navbar bg="dark" variant="dark">
