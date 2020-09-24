@@ -1,49 +1,20 @@
-import {
-  USER_LOADING,
-  USER_LOADED,
-  LOGIN_SUCCESS,
-  REGISTER_SUCCESS,
-  AUTHENTICATION_ERROR,
-  LOG_OUT,
-  LOGIN_FAIL,
-} from '../constants/constants';
+import { SET_USER_INFO } from '../constants/constants';
 
-const initialState = {
+const defaultState = {
   isLoading: false,
-  isAuthenticated: null,
-  token: localStorage.getItem('token'),
-  user: null,
+  isLogedIn: false,
+  token: null,
+  userId: null,
+  userName: null,
 
 };
+const userInfo = localStorage.getItem('USER_INFO');
+const INITIALSTATE = userInfo ? JSON.parse(userInfo) : defaultState;
 
-export default (state = initialState, { type, payload }) => {
+export default (state = INITIALSTATE, { type, payload }) => {
   switch (type) {
-    case USER_LOADING:
-      return { ...state, isLoading: true };
-    case USER_LOADED:
-      return {
-        ...state,
-        isLoading: false,
-        isAuthenticated: true,
-        user: payload.user,
-      };
-    case LOGIN_SUCCESS:
-    case REGISTER_SUCCESS:
-      return {
-        ...state,
-        isLoading: false,
-        isAuthenticated: true,
-      };
-    case LOGIN_FAIL:
-    case AUTHENTICATION_ERROR:
-    case LOG_OUT:
-      return {
-        ...state,
-        isLoading: false,
-        isAuthenticated: null,
-        token: null,
-        user: null,
-      };
+    case SET_USER_INFO:
+      return { ...payload };
     default:
       return state;
   }

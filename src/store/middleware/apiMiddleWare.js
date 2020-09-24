@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { API, BASE_URL } from '../constants/constants';
 
-export const apiMiddleWare = ({ dispatch, getState }) => next => action => {
+const apiMiddleWare = ({ dispatch, getState }) => next => action => {
   if (action.type !== API) return next(action);
   const {
     url,
@@ -29,3 +29,4 @@ export const apiMiddleWare = ({ dispatch, getState }) => next => action => {
       }
     });
 };
+export default apiMiddleWare;

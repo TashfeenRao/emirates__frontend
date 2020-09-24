@@ -9,11 +9,9 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import rootReducer from './store/reducers/rootReducer';
+import configureStore from './store/config/configStore';
 /* eslint-disable no-underscore-dangle */
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(thunk)),
-);
+const store = configureStore();
 /* eslint-enable */
 ReactDOM.render(
   <Provider store={store}>
