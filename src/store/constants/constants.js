@@ -12,3 +12,6 @@ export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
 export const LOGIN_FAIL = 'LOGIN_FAIL';
 export const REGISTRATION = 'REGISTRATION';
 export const LOG_OUT = 'LOG_OUT';
+export const API = 'API';
+export const SET_USER_INFO = 'SET_USER_INFO';
+export const BASE_URL = 'http://localhost:3000';
